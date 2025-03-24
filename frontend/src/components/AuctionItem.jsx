@@ -40,7 +40,7 @@ function AuctionItem() {
 			if (token) {
 				try {
 					const res = await axios.post(
-						"/api/users/profile",
+						"${import.meta.env.VITE_TARGET}/api/users/profile",
 						{},
 						{
 							headers: { Authorization: `Bearer ${token}` },
@@ -122,7 +122,7 @@ function AuctionItem() {
 
 	const handleDelete = async () => {
 		try {
-			await axios.delete(`/api/auctions/${id}`);
+			await axios.delete(`${import.meta.env.VITE_TARGET}/api/auctions/${id}`);
 			navigate("/auctions");
 		} catch (error) {
 			console.error("Error deleting auction item:", error);
