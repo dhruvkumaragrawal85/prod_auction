@@ -26,8 +26,10 @@ function Login() {
 		e.preventDefault();
 		setLoading(true);
 		try {
+			const apiUrl = `${import.meta.env.VITE_TARGET}/api/users/login`;
+			console.log("Login API URL:", apiUrl);
 			const res = await axios.post(
-				`${import.meta.env.VITE_TARGET}/api/users/login`,
+				apiUrl,
 				{ email, password },
 				{ withCredentials: true }
 			);
