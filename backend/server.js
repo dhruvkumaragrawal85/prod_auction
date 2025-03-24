@@ -4,7 +4,10 @@ const connectDB = require("./config/db");
 const cors = require("cors");
 const router = express.Router();
 
-dotenv.config();
+if (process.env.NODE_ENV !== "production") {
+	dotenv.config();
+}
+
 connectDB();
 
 const app = express();
