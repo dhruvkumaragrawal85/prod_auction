@@ -18,9 +18,10 @@ function Login() {
 
 	useEffect(() => {
 		if (isLoggedIn) {
-			navigate("/profile");
+			navigate("/profile", { replace: true });
 		}
 	}, [isLoggedIn, navigate]);
+
 
 	const handleLogin = async (e) => {
 		e.preventDefault();
