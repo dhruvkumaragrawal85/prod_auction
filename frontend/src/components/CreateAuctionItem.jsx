@@ -19,7 +19,7 @@ const CreateAuctionItem = () => {
     if (token) {
       try {
         await axios.post(
-          "${import.meta.env.VITE_TARGET}/api/auctions",
+          '${import.meta.env.VITE_TARGET}/api/auctions',
           { title, description, startingBid, endDate },
           {
             headers: { Authorization: `Bearer ${token}` },

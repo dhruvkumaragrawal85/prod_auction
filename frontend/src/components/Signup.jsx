@@ -29,7 +29,7 @@ function Signup() {
 		setLoading(true);
 		try {
 			const res = await axios.post(
-				"${import.meta.env.VITE_TARGET}/api/users/register",
+				`${import.meta.env.VITE_TARGET}/api/users/register`,
 				{ username, email, password, confirmPassword },
 				{ withCredentials: true }
 			);

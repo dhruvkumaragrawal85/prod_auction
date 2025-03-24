@@ -40,7 +40,7 @@ function AuctionItem() {
 			if (token) {
 				try {
 					const res = await axios.post(
-						"${import.meta.env.VITE_TARGET}/api/users/profile",
+						`${import.meta.env.VITE_TARGET}/api/users/profile`,
 						{},
 						{
 							headers: { Authorization: `Bearer ${token}` },

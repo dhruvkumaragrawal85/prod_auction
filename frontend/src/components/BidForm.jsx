@@ -26,7 +26,7 @@ const BidForm = () => {
 				.find((row) => row.startsWith("jwt="))
 				?.split("=")[1];
 			await axios.post(
-				"${import.meta.env.VITE_TARGET}/api/bids",
+				'${import.meta.env.VITE_TARGET}/api/bids',
 				{ auctionItemId: id, bidAmount },
 				{ headers: { Authorization: `Bearer ${token}` } }
 			);
