@@ -1,7 +1,7 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
-const target = "https://prod-auction-backend.vercel.app/api";
+const target = "https://prod-auction-backend.vercel.app";
 
 export default defineConfig({
 	plugins: [react()],
