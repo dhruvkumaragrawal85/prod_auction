@@ -24,7 +24,9 @@ function Profile() {
 				?.split("=")[1];
 			if (token) {
 				try {
+
 					const res = await axios.post(
+						console.log(import.meta.env.VITE_TARGET)
 						`${import.meta.env.VITE_TARGET}/api/users/profile`,
 						{},
 						{
